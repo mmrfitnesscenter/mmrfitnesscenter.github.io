@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Stardos+Stencil:wght@400;700&display=swap');
+html,
+body {
+    background-color: #0C1221;
+    /* scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; */
+}
+
+/* Mobile */
+@media only screen and (max-width: 500px) {
+    h2{
+        font-size: 1.3rem;
+    }
+    #close-icon{
+        height: 3rem;
+        width:3rem;
+    }
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        color: white;
+        backdrop-filter: blur(50px);
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+    }
+    .hide-mobile {
+        display: none !important;
+        width: 0%;
+    }
+    .side-nav{
+        height: 100vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        z-index: 2;
+        color: white;
+        backdrop-filter: blur(50px);
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom-right-radius: 40px;
+        border-top-right-radius: 40px;
+        transition: width 0.5s;
+    }
+
+    .side-nav-close{
+        width: 0% !important;
+    }
+    .side-nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-nav-options{
+        height: 60vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .nav-item{
+        text-decoration: none;
+        color: #8D8D8D;
+        font-size: 2rem;
+        font-family: Lato;
+        padding: 1rem;
+    }
+    .nav-brand-middle {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        font-family: Lato;
+    }
+
+    #menu-icon{
+        order: 1;
+        height: 2rem;
+        width: 2rem;
+        margin-left: 2rem;
+    }
+
+    #login-button{
+        background-color: #FF7A00;
+        border: none;
+        color: white;
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 15px;
+        font-family: 'Lato';
+        font-size: 1.5rem;
+        margin: 1rem;
+        box-shadow: 0px 0px 15px 1px #ff7a39;
+    }
+
+    .landingimage {
+        background-image: url("../images/background-landing-page.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    #landingText {
+        position: absolute;
+        left: 5vw;
+        top: 60vh;
+        text-align: center;
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4.5rem;
+        line-height: 90px;
+        text-align: right;
+        color: #FFFFFF;
+    }
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .side-nav-close{
+        width: 0% !important;
+    }
+    .side-nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .side-nav-options{
+        height: 70vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align:center;
+    }
+    #close-icon{
+        height: 3rem;
+        width:3rem;
+    }
+    
+    .side-nav{
+        height: 100vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        z-index: 2;
+        color: white;
+        backdrop-filter: blur(50px);
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom-right-radius: 40px;
+        border-top-right-radius: 40px;
+        transition: width 0.5s;
+    }
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        color: white;
+        backdrop-filter: blur(50px);
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+    }
+    
+    .nav-left {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-right {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hide-tab {
+        display: none;
+        width: 0%;
+    }
+    
+    .nav-item{
+        text-decoration: none;
+        color: #8D8D8D;
+        font-size: 3rem;
+        font-family: Lato;
+        padding: 1rem;
+    }
+    
+    .nav-is-active{
+        color: white;
+        border-bottom: 3px solid white;
+    }
+    .nav-brand-middle {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        font-family: Lato;
+    }
+    
+    #login-button{
+        background-color: #FF7A00;
+        border: none;
+        color: white;
+        padding: 20px 40px 20px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 15px;
+        font-family: 'Lato';
+        font-size: 2rem;
+        margin: 1rem;
+        box-shadow: 0px 0px 15px 1px #ff7a39;
+    }
+    .landingimage {
+        background-image: url("../images/background-landing-page.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+    
+    #landingText {
+        position: absolute;
+        left: 20vw;
+        top: 65vh;
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 6rem;
+        line-height: 99px;
+        text-align: right;
+        color: #FFFFFF;
+    }
+    #menu-icon{
+        order: 1;
+        height: 2rem;
+        width: 2rem;
+        margin-left: 5rem;
+    }
+}
+
+/* Desktop and Laptop */
+@media only screen and (min-width: 1200px) {
+    .hide-desktop {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        color: white;
+        backdrop-filter: blur(50px);
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .nav-left {
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-right {
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: -10vw;
+    }
+
+    .nav-item{
+        text-decoration: none;
+        color: #8D8D8D;
+        font-size: 1.2rem;
+        font-family: Lato;
+    }
+
+    .nav-is-active{
+        color: white;
+        border-bottom: 3px solid white;
+    }
+    .nav-brand-middle {
+        font-family: Lato;
+    }
+
+    #login-button{
+        background-color: #FF7A00;
+        border: none;
+        color: white;
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 15px;
+        font-family: 'Lato';
+        font-size: 1.2rem;
+        transition: box-shadow 0.5s;
+    }
+
+    #login-button:hover {
+        box-shadow: 0px 0px 15px 1px #ff7a39;
+        cursor: pointer;
+    }
+
+
+    .fullHeight {
+        height: 100%;
+    }
+
+    .landingimage {
+        background-image: url("../images/background-landing-page.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    #landingText {
+        position: absolute;
+        left: 20vw;
+        top: 65vh;
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 6rem;
+        line-height: 99px;
+        text-align: right;
+        color: #FFFFFF;
+    }
+
+    .serviceCarousel {
+        display: flex;
+        padding: 0 80px;
+        transition-duration: 5s;
+        align-content: space-between;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 99px;
+        color: #FFFFFF;
+    }
+
+    .carImg img {
+        width: 200px;
+    }
+
+    .arrows {
+        width: 100px;
+        color: ivory;
+        padding-top: 200px;
+    }
+
+    .carImg {
+        width: 300px;
+        height: 450px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .active {
+        width: 400px;
+        padding: 115px;
+    }
+
+    .active img {
+        width: 300px;
+    }
+
+    .active .serviceText {
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+        color: #868686;
+        display: block;
+    }
+
+    .active .service {
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        color: #CECECE;
+    }
+
+    .service {
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 40px;
+        color: #CECECE;
+    }
+
+    .serviceText {
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 23px;
+        color: #868686;
+        display: none;
+    }
+
+    .contactFlex {
+        display: flex;
+    }
+
+    .contactHeading {
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 88px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .contactText {
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        text-align: center;
+        color: #CECECE;
+    }
+
+    #map {
+        width: 602px;
+        height: 540px;
+        left: 169px;
+        top: 194px;
+    }
+
+    .mapImg {
+        padding-left: 69px;
+    }
+
+    .mapText {
+        width: 165px;
+        height: 33px;
+        left: 388px;
+        top: 777px;
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: #CECECE;
+    }
+
+    #email {
+        width: 512px;
+        height: 76px;
+        left: 857px;
+        top: 422px;
+        background: #FEFDFD;
+        border-radius: 25px;
+    }
+
+    #phone {
+        width: 512px;
+        height: 76px;
+        left: 856px;
+        top: 515px;
+        background: #FEFDFD;
+        border-radius: 25px;
+    }
+
+    #query {
+        width: 533px;
+        height: 150px;
+        left: 835px;
+        top: 608px;
+        background: #FEFDFD;
+        border-radius: 25px;
+    }
+
+    #submit {
+        width: 255px;
+        height: 72px;
+        left: 986px;
+        top: 806px;
+        background: #0034BB;
+        box-shadow: 0 0 20px 10px #031A53;
+        border-radius: 50px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+        color: #FFFFFF;
+    }
+
+    .contRight {
+        padding-left: 200px;
+    }
+
+    .mobileImage {
+        background-image: url("file:///C:/Users/abhi1/Desktop/chase-kinney-FMQBLyhD2HU-unsplash.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        position: relative;
+        /* filter: grayscale(100%); */
+    }
+
+    .mobileFlex {
+        display: flex;
+        flex: auto;
+    }
+
+    .mobPhone img {
+        position: absolute;
+        width: 351.1px;
+        height: 700px;
+        left: 1018px;
+        top: 129px;
+        border-radius: 50px;
+    }
+
+    .mobHeading {
+        position: absolute;
+        width: 533px;
+        height: 198px;
+        left: 187px;
+        top: 148px;
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 66px;
+        text-align: center;
+        color: #CECECE;
+    }
+
+    .mobText {
+        padding-top: 69px;
+        position: absolute;
+        width: 274px;
+        height: 99px;
+        left: 324px;
+        top: 389px;
+        font-family: Stardos Stencil;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: #868686;
+    }
+
+    .gImg {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        left: 139px;
+        top: 569px;
+    }
+
+    .section-scroll-child {
+        scroll-snap-align: start;
+    }
+
+}
