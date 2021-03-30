@@ -1,0 +1,389 @@
+html,
+body {
+    background-color: #0C1221;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.landingimage {
+    background-image: url("../images/background-landing-page.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.landingText {
+    position: absolute;
+    width: 346px;
+    height: 286px;
+    left: 222px;
+    top: 600px;
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 99px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.serviceCarousel {
+    display: flex;
+    padding: 0px 80px;
+    transition-duration: 5s;
+    align-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 99px;
+    color: #FFFFFF;
+}
+
+.carImg img {
+    width: 200px;
+}
+
+.arrows {
+    width: 100px;
+    color: ivory;
+    padding-top: 200px;
+}
+
+.carImg {
+    width: 300px;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    width: 400px;
+    padding: 115px;
+}
+
+.active img {
+    width: 300px;
+}
+
+.active .serviceText {
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    color: #868686;
+    display: block;
+}
+
+.active .service {
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 50px;
+    color: #CECECE;
+}
+
+.service {
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    color: #CECECE;
+}
+
+.serviceText {
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 23px;
+    color: #868686;
+    display: none;
+}
+
+.contactFlex {
+    display: flex;
+}
+
+.contactHeading {
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 88px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contactText {
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    color: #CECECE;
+}
+
+#map {
+    width: 602px;
+    height: 540px;
+    left: 169px;
+    top: 194px;
+}
+
+.mapImg {
+    padding-left: 69px;
+}
+
+.mapText {
+    width: 165px;
+    height: 33px;
+    left: 388px;
+    top: 777px;
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #CECECE;
+}
+
+#email {
+    width: 512px;
+    height: 76px;
+    left: 857px;
+    top: 422px;
+    background: #FEFDFD;
+    border-radius: 25px;
+}
+
+#phone {
+    width: 512px;
+    height: 76px;
+    left: 856px;
+    top: 515px;
+    background: #FEFDFD;
+    border-radius: 25px;
+}
+
+#query {
+    width: 533px;
+    height: 150px;
+    left: 835px;
+    top: 608px;
+    background: #FEFDFD;
+    border-radius: 25px;
+}
+
+#submit {
+    width: 255px;
+    height: 72px;
+    left: 986px;
+    top: 806px;
+    background: #0034BB;
+    box-shadow: 0px 0px 20px 10px #031A53;
+    border-radius: 50px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.contRight {
+    padding-left: 200px;
+}
+
+.mobileImage {
+    background-image: url("file:///C:/Users/abhi1/Desktop/chase-kinney-FMQBLyhD2HU-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    /* filter: grayscale(100%); */
+}
+
+.mobileFlex {
+    display: flex;
+    flex: auto;
+}
+
+.mobPhone img {
+    position: absolute;
+    width: 351.1px;
+    height: 700px;
+    left: 1018px;
+    top: 129px;
+    border-radius: 50px;
+}
+
+.mobHeading {
+    position: absolute;
+    width: 533px;
+    height: 198px;
+    left: 187px;
+    top: 148px;
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 66px;
+    text-align: center;
+    color: #CECECE;
+}
+
+.mobText {
+    padding-top: 69px;
+    position: absolute;
+    width: 274px;
+    height: 99px;
+    left: 324px;
+    top: 389px;
+    font-family: Stardos Stencil;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #868686;
+}
+
+.gImg {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 139px;
+    top: 569px;
+}
+
+.section-scroll-child {
+    scroll-snap-align: start;
+}
+
+
+/* GALLERY-SECTION */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Position the image container (needed to position the left and right arrows) */
+
+.container {
+    position: relative;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+
+.cursor {
+    cursor: pointer;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* Container for image text */
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Six columns side by side */
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+
+/* Add a transparency effect for thumnbail images */
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
