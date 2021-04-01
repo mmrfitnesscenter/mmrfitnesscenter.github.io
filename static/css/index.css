@@ -8,7 +8,7 @@ body {
 }
 
 /* Mobile */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 767px) {
     h2{
         font-size: 1.3rem;
     }
@@ -21,7 +21,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: start;
-        position: absolute;
+        position: fixed;
         z-index: 2;
         width: 100vw;
         color: white;
@@ -42,7 +42,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        position: absolute;
+        position: fixed;
         z-index: 2;
         color: white;
         backdrop-filter: blur(50px);
@@ -109,7 +109,7 @@ body {
     }
 
     .landingimage {
-        background-image: url("../images/background-landing-page.webp");
+        background-image: url("../images/LandingPageBackground.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -135,7 +135,7 @@ body {
 }
 
 /* Tablet */
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
     .side-nav-close{
         width: 0% !important;
     }
@@ -164,7 +164,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        position: absolute;
+        position: fixed;
         z-index: 2;
         color: white;
         backdrop-filter: blur(50px);
@@ -179,7 +179,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: start;
-        position: absolute;
+        position: fixed;
         z-index: 2;
         width: 100vw;
         color: white;
@@ -243,7 +243,7 @@ body {
         box-shadow: 0px 0px 15px 1px #ff7a39;
     }
     .landingimage {
-        background-image: url("../images/background-landing-page.webp");
+        background-image: url("../images/LandingPageBackground.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -274,6 +274,100 @@ body {
 
 /* Desktop and Laptop */
 @media only screen and (min-width: 1200px) {
+    #slide-left-button {
+        padding-right: 5rem;
+        cursor: pointer;
+        position: absolute;
+        top: 95rem;
+        left: 10vw;
+    }
+
+    #slide-right-button {
+        padding-left: 5rem;
+        cursor: pointer;
+        position: absolute;
+        top: 95rem;
+        left: 80vw;
+    }
+
+    #slide-left {
+        margin-right: -35rem;
+        position: absolute;
+        top: 75rem;
+        transition: margin-right 0.5s, z-index 0.5s, opacity 0.5s;
+    }
+
+    #slide-right {
+        margin-left: -35rem;
+        position: absolute;
+        top: 75rem;
+        transition: margin-left 0.5s, z-index 0.5s, opacity 0.5s;
+    }
+
+    #slide-center {
+        opacity: 100% !important;
+        z-index: 3;
+        position: absolute;
+        top: 75rem;
+        transition: z-index 0.5s, opacity 0.5s;
+    }
+
+    .slide-title {
+        font-size: 2.5rem;
+        font-family: 'Stardos Stencil';
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #CECECE;
+    }
+
+    .slide-description {
+        opacity: 100% !important;
+        font-size: 1.5rem;
+        width: 80%;
+        color: #868686;
+        font-family: 'Stardos Stencil';
+    }
+    
+    .slideshow-container {
+        display: flex;
+        padding-top: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 30%;
+        background-color: #05080E;
+        height: 70vh;
+        opacity: 30%;
+        border-radius: 15px;
+    }
+    .slide-image {
+        width: 30rem;
+        height: auto;
+        opacity: 30%;
+        margin: 3rem;
+        border-radius: 15px;
+    }
+
+    .section {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    .section-heading {
+        font-size: 5rem;
+        font-family: Stardos Stencil;
+        color: white;
+        font-weight: 700;
+        height: 6rem;
+        padding-top: 8rem;
+    }
+
     .hide-desktop {
         display: none;
     }
@@ -281,7 +375,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        position: absolute;
+        position: fixed;
         z-index: 2;
         width: 100vw;
         color: white;
@@ -312,6 +406,11 @@ body {
         color: #8D8D8D;
         font-size: 1.2rem;
         font-family: Lato;
+        transition: color 0.5s, border-bottom 0.5s;
+    }
+
+    .nav-item:hover{
+        color: white;
     }
 
     .nav-is-active{
@@ -347,12 +446,12 @@ body {
     }
 
     .landingimage {
-        background-image: url("../images/background-landing-page.webp");
+        background-image: url("../images/LandingPageBackground.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
-        width: 100vw;
+        max-width: 100vw;
         position: relative;
     }
 
