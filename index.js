@@ -33,3 +33,25 @@ function moveSlide(dir) {
         rightSlide.id = 'slide-center';
     }
 }
+
+function moveGallery(dir) {
+    var left2Image = document.getElementById('gallery-image-left-2');
+    var left1Image = document.getElementById('gallery-image-left-1');
+    var centerImage = document.getElementById('gallery-image-center');
+    var right1Image = document.getElementById('gallery-image-right-1');
+    var right2Image = document.getElementById('gallery-image-right-2');
+
+    if (dir === 'Left') {
+        left2Image.id = 'gallery-image-left-1';
+        left1Image.id = 'gallery-image-center';
+        centerImage.id = 'gallery-image-right-1';
+        right1Image.id = 'gallery-image-right-2';
+        right2Image.id = 'gallery-image-left-2';
+    } else if (dir === 'Right') {
+        left2Image.id = 'gallery-image-right-2';
+        left1Image.id = 'gallery-image-left-2';
+        centerImage.id = 'gallery-image-left-1';
+        right1Image.id = 'gallery-image-center';
+        right2Image.id = 'gallery-image-right-1';
+    }
+}

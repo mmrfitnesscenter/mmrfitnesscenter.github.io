@@ -14,14 +14,14 @@
         <div class="nav-left hide-tab hide-mobile">
             <a class="nav-item nav-is-active" href="#home">Home</a>
             <a class="nav-item" href="#services">Services</a>
-            <a class="nav-item" href="#">Gallery</a>
+            <a class="nav-item" href="#gallery">Gallery</a>
         </div>
         <div class="nav-brand-middle">
             <h2>MMR FITNESS CENTER</h2>
         </div>
         <div class="nav-right hide-tab hide-mobile">
-            <a class="nav-item" href="#">Contact</a>
-            <a class="nav-item" href="#">Mobile</a>
+            <a class="nav-item" href="#contact">Contact</a>
+            <a class="nav-item" href="#mobile-section">Mobile</a>
             <button id="login-button">Login</button>
         </div>
         <div id="menu-icon" onclick="toggleSidenav()">
@@ -38,24 +38,25 @@
                 </svg>
             </div>
             <div class="side-nav-options">
-                <a class="nav-item">Home</a>
-                <a class="nav-item">Services</a>
-                <a class="nav-item">Gallery</a>
-                <a class="nav-item">Contact</a>
-                <a class="nav-item">Mobile</a>
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#services" class="nav-item">Services</a>
+                <a href="#gallery" class="nav-item">Gallery</a>
+                <a href="#contact" class="nav-item">Contact</a>
+                <a href="#mobile-section" class="nav-item">Mobile</a>
                 <button id="login-button">Login</button>
             </div>
         </div>
     </div>
     <!-- LANDING PAGE -->
-    <div class="fullHeight landingimage section-scroll-child"  id="home">
+    <div class="full-height landingimage section-scroll-child" id="home">
         <div id="landingText">FITNESS.<br />DONE.<br />RIGHT.</div>
     </div>
     <!-- SERVICES PAGE -->
-    <div class="fullHeight section-scroll-child section" id="services">
+    <div class="full-height section-scroll-child section" id="services">
         <div class="section-heading">SERVICES</div>
         <div class="slideshow-container">
-            <div id="slide-left-button" onclick="moveSlide('Left')"><img src="./static/images/BackArrow.svg" alt="Back Arrow Icon" height=42 width=42></div>
+            <div id="slide-left-button" onclick="moveSlide('Left')"><img src="./static/images/BackArrow.svg"
+                    alt="Back Arrow Icon" height=42 width=42></div>
             <div class="slide" id="slide-left">
                 <div>
                     <img class="slide-image" src="./static/images/BodyBuilding.webp" alt="Injury Recovery Image">
@@ -90,133 +91,92 @@
                     We will help battle your weight with our carefully curated weight loss plan.
                 </div>
             </div>
-            <div id="slide-right-button" onclick="moveSlide('Right')"><img src="./static/images/FrontArrow.svg" alt="Back Arrow Icon" height=42 width=42></div>
+            <div id="slide-right-button" onclick="moveSlide('Right')"><img src="./static/images/FrontArrow.svg"
+                    alt="Back Arrow Icon" height=42 width=42></div>
         </div>
     </div>
 
-        <!-- GALLERY PAGE -->
-
-        <!-- <div class="fullHeight section-scroll-child">
-        <h1>GALLERY</h1>
-        <div class="container">
-
-            <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                <img src="./static/images/G-image1.jpg">
+    <!-- GALLERY PAGE -->
+    <div class="full-height section-scroll-child section" id="gallery">
+        <div class="section-heading">GALLERY</div>
+        <div class="slideshow-container">
+            <div id="gallery-left-button">
+                <img src="./static/images/BackArrow.svg" onclick="moveGallery('Left')" alt="Back Arrow Icon" height=42
+                    width=42>
             </div>
 
-            <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="./static/images/G-image2.jpg">
+            <img class="gallery-image" id="gallery-image-left-2" src="./static/images/Gallery2.webp" alt="Bench press">
+            <img class="gallery-image" id="gallery-image-left-1" src="./static/images/Gallery3.webp" alt="Threadmill">
+            <img class="gallery-image" id="gallery-image-center" src="./static/images/Gallery7.webp"
+                alt="Overview image 1">
+            <img class="gallery-image" id="gallery-image-right-1" src="./static/images/Gallery1.webp" alt="Lat machine">
+            <img class="gallery-image" id="gallery-image-right-2" src="./static/images/Gallery5.webp"
+                alt="Bench press 2">
+            <!-- <img class="gallery-image" id="gallery-image-center" src="./static/images/Gallery4.webp" alt="Leg press machine"> -->
+            <!-- <img class="gallery-image" id="gallery-image-right-2" src="./static/images/Gallery6.webp" alt="Calf raises"> -->
+
+            <div id="gallery-right-button">
+                <img src="./static/images/FrontArrow.svg" onclick="moveGallery('Right')" alt="Front Arrow Icon"
+                    height=42 width=42>
             </div>
+        </div>
+    </div>
 
-            <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="./static/images/G-image3.jpg">
-            </div>
+    <!-- CONTACT PAGE -->
 
-            <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="./static/images/G-image4.jpg">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                <img src="./static/images/G-image5.jpg">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                <img src="./static/images/G-image6.jpg">
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-            <div class="row">
-                <div class="column">
-                    <img class="demo cursor" src="./static/images/G-image1.jpg" onclick="currentSlide(1)" alt="The Woods">
+    <div class="full-height section-scroll-child section" id="contact">
+        <div class="section-heading">CONTACT</div>
+        <div class="contact-section">
+            <div class="map-section">
+                <div class="map-image">
+                    <iframe id="map-embed" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15544.572584741447!2d80.190342!3d13.090113!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42d3e58d33f8cd7a!2sMMR%20fitness%20centre!5e0!3m2!1sen!2sin!4v1617392421456!5m2!1sen!2sin" style="border:0;" allowfullscreen="yes" loading="lazy"></iframe>
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src="./static/images/G-image2.jpg" onclick="currentSlide(2)" alt="Cinque Terre">
+    
+                <div class="map-details">
+                    Mr. Arasu<br />OWNER / MASTER<br />918939193941<br /> 56, 22, Madurai Veeran St,
+                    <br />Kalaivanar Nagar, Padi,<br />Chennai, Tamil Nadu 600050
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src="./static/images/G-image3.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+            <div class="contact-query-section">
+                <div class="contact-text">Enter your details.<br />We will get back to you shortly</div>
+                <form action="">
+                    <p>
+                        <label for="email"></label>
+                        <input id="email" type="email" placeholder="Email Address" minlength="4" maxlength="24">
+                    </p>
+                    <p>
+                        <label for="phone"></label>
+                        <input id="phone" type="number" placeholder="Phone Number">
+                    </p>
+                    <p>
+                        <label for="query"></label>
+                        <input id="query" type="text" placeholder="Your Query" maxlength="100">
+                    </p>
+                    <button id="submit" type="button"> Submit </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE PAGE -->
+
+    <div class="full-height section-scroll-child section" id="mobile-section">
+            <div class="mobile-section">
+                <div>
+                    <div class="mobile-heading">MMR FITNESS CENTER<br />MOBILE<br />APPLICATION</div>
+                    <div class="mobile-text">Your fitness companion, now on your palm.<br />Anywhere.</div>
+                    <div>
+                        <img id="playstore-badge" src="./static/images/GooglePlayBadge.png">
+                    </div>
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src="./static/images/G-image4.jpg" onclick="currentSlide(4)" alt="Northern Lights">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="./static/images/G-image5.jpg" onclick="currentSlide(5)" alt="Nature and sunrise">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="./static/images/G-image6.jpg" onclick="currentSlide(6)" alt="Snowy Mountains">
+                <div>
+                    <img id="mobile-screenshot" src="./static/images/ApplicationScreenshot.webp"
+                        alt="Screen shot of application">
                 </div>
             </div>
         </div>
-
-
-
-
-    </div> -->
-
-        <!-- CONTACT PAGE -->
-
-        <!-- <div class="fullHeight section-scroll-child">
-            <div class="contactFlex">
-                <div class="mapImg">
-                    <img id="map" src="./static/images/mapScreenshot.png">
-                    <div class="mapText">Mr. Arasu<br />OWNER / MASTER<br />918939193941<br /> 56, 22, Madurai Veeran
-                        St,
-                        <br />Kalaivanar Nagar, Padi,<br />Chennai, Tamil Nadu 600050</div>
-
-                </div>
-                <div class="contRight">
-                    <div class="contactHeading">CONTACT US</div>
-                    <div class="contactText">Enter your details.<br />We will get back to you shortly</div>
-                    <form action="">
-                        <p>
-                            <label for="email"></label>
-                            <input id="email" type="email" placeholder="Email Address" minlength="4" maxlength="24">
-                        </p>
-                        <p>
-                            <label for="phone"></label>
-                            <input id="phone" type="number" placeholder="Phone Number">
-                        </p>
-                        <p>
-                            <label for="query"></label>
-                            <input id="query" type="text" placeholder="Your Query" maxlength="100">
-                        </p>
-                        <button id="submit" type="button"> SUBMIT </button>
-                    </form>
-
-                </div>
-            </div>
-        </div> -->
-
-        <!-- MOBILE PAGE -->
-
-        <!-- <div class="fullHeight mobileImage section-scroll-child">
-            <div class="mobileFlex">
-                <div>
-                    <div class="mobHeading">MMR FITNESS CENTER<br />MOBILE<br />APPLICATION</div>
-                    <div class="mobText">Your fitness companion,<br />now on your palm.<br />Anywhere.</div>
-                    <div class="gImg">
-                        <img src="C:\Users\abhi1\Desktop\mmrgym-website-master\images\google-play-badge.png">
-                        <div></div>
-                    </div>
-                </div>
-                <div class="mobPhone">
-                    <img src="C:\Users\abhi1\Desktop\mmrgym-website-master\images\Screenshot 2021-03-23 at 2.41.18 AM.png"
-                        alt="">
-                </div>
-            </div>
-        </div> -->
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 
 </body>
 
