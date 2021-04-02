@@ -3,8 +3,8 @@
 html,
 body {
     background-color: #0C1221;
-    /* scroll-snap-type: y mandatory;
-    scroll-behavior: smooth; */
+    /* scroll-snap-type: y mandatory; */
+    scroll-behavior: smooth;
 }
 
 /* Mobile */
@@ -22,7 +22,7 @@ body {
         align-items: center;
         justify-content: start;
         position: fixed;
-        z-index: 2;
+        z-index: 5;
         width: 100vw;
         color: white;
         backdrop-filter: blur(50px);
@@ -132,10 +132,129 @@ body {
         color: #FFFFFF;
     }
 
+    .section {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .fullHeight {
+        height: 100%;
+    }
+
+    .section-heading {
+        font-size: 3rem;
+        font-family: Stardos Stencil;
+        color: white;
+        font-weight: 700;
+        height: 6rem;
+        padding-top: 4rem;
+    }
+
+    /* Services section */
+    #slide-left-button {
+        cursor: pointer;
+        position: absolute;
+        top: 98rem;
+        left: 35vw;
+        z-index: 3;
+    }
+
+    #slide-right-button {
+        cursor: pointer;
+        position: absolute;
+        top: 98rem;
+        left: 50vw;
+    }
+
+    #slide-left {
+        margin-right: -2rem;
+        position: absolute;
+        transition: margin-right 0.5s, z-index 0.5s, opacity 0.5s;
+    }
+
+    #slide-right {
+        margin-left: -2rem;
+        position: absolute;
+        transition: margin-left 0.5s, z-index 0.5s, opacity 0.5s;
+    }
+
+    #slide-center {
+        opacity: 100% !important;
+        z-index: 3;
+        transition: z-index 0.5s, opacity 0.5s;
+    }
+
+    .slide-title {
+        font-size: 2.5rem;
+        font-family: 'Stardos Stencil';
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #CECECE;
+    }
+
+    .slide-description {
+        opacity: 100% !important;
+        font-size: 1.5rem;
+        width: 80%;
+        color: #868686;
+        font-family: 'Stardos Stencil';
+    }
+    
+    .slideshow-container {
+        display: flex;
+        padding-top: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .slide {
+        position: absolute;
+        top: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 80%;
+        background-color: #05080E;
+        height: 70vh;
+        opacity: 30%;
+        border-radius: 15px;
+    }
+    .slide-image {
+        width: 70vw;
+        height: auto;
+        opacity: 30%;
+        margin: 2rem;
+        border-radius: 15px;
+    }
+
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+
+    .section {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .fullHeight {
+        height: 100%;
+    }
+
+    .section-heading {
+        font-size: 5rem;
+        font-family: Stardos Stencil;
+        color: white;
+        font-weight: 700;
+        height: 6rem;
+        padding-top: 8rem;
+    }
+
+    /* SideNav */
     .side-nav-close{
         width: 0% !important;
     }
@@ -165,7 +284,7 @@ body {
         align-items: center;
         justify-content: space-around;
         position: fixed;
-        z-index: 2;
+        z-index: 5;
         color: white;
         backdrop-filter: blur(50px);
         background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -174,6 +293,8 @@ body {
         border-top-right-radius: 40px;
         transition: width 0.5s;
     }
+
+    /* Nav */
     .nav {
         display: flex;
         flex-direction: row;
@@ -270,45 +391,40 @@ body {
         width: 2rem;
         margin-left: 5rem;
     }
-}
 
-/* Desktop and Laptop */
-@media only screen and (min-width: 1200px) {
+    /* Services section */
     #slide-left-button {
         padding-right: 5rem;
         cursor: pointer;
         position: absolute;
-        top: 95rem;
-        left: 10vw;
+        top: 100rem;
+        left: 5vw;
+        z-index: 3;
     }
 
     #slide-right-button {
         padding-left: 5rem;
         cursor: pointer;
         position: absolute;
-        top: 95rem;
+        top: 100rem;
         left: 80vw;
     }
 
     #slide-left {
-        margin-right: -35rem;
+        margin-right: -5rem;
         position: absolute;
-        top: 75rem;
         transition: margin-right 0.5s, z-index 0.5s, opacity 0.5s;
     }
 
     #slide-right {
-        margin-left: -35rem;
+        margin-left: -5rem;
         position: absolute;
-        top: 75rem;
         transition: margin-left 0.5s, z-index 0.5s, opacity 0.5s;
     }
 
     #slide-center {
         opacity: 100% !important;
         z-index: 3;
-        position: absolute;
-        top: 75rem;
         transition: z-index 0.5s, opacity 0.5s;
     }
 
@@ -336,11 +452,13 @@ body {
     }
     
     .slide {
+        position: absolute;
+        top: 80rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        max-width: 30%;
+        max-width: 70%;
         background-color: #05080E;
         height: 70vh;
         opacity: 30%;
@@ -353,6 +471,10 @@ body {
         margin: 3rem;
         border-radius: 15px;
     }
+}
+
+/* Desktop and Laptop */
+@media only screen and (min-width: 1200px) {
 
     .section {
         display: flex;
@@ -371,6 +493,9 @@ body {
     .hide-desktop {
         display: none;
     }
+
+    /* Navbar */
+
     .nav {
         display: flex;
         align-items: center;
@@ -468,249 +593,90 @@ body {
         color: #FFFFFF;
     }
 
-    .serviceCarousel {
-        display: flex;
-        padding: 0 80px;
-        transition-duration: 5s;
-        align-content: space-between;
-    }
-
-    h1 {
-        text-align: center;
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 72px;
-        line-height: 99px;
-        color: #FFFFFF;
-    }
-
-    .carImg img {
-        width: 200px;
-    }
-
-    .arrows {
-        width: 100px;
-        color: ivory;
-        padding-top: 200px;
-    }
-
-    .carImg {
-        width: 300px;
-        height: 450px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .active {
-        width: 400px;
-        padding: 115px;
-    }
-
-    .active img {
-        width: 300px;
-    }
-
-    .active .serviceText {
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 33px;
-        color: #868686;
-        display: block;
-    }
-
-    .active .service {
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 50px;
-        color: #CECECE;
-    }
-
-    .service {
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 40px;
-        color: #CECECE;
-    }
-
-    .serviceText {
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 23px;
-        color: #868686;
-        display: none;
-    }
-
-    .contactFlex {
-        display: flex;
-    }
-
-    .contactHeading {
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 64px;
-        line-height: 88px;
-        text-align: center;
-        color: #FFFFFF;
-    }
-
-    .contactText {
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 50px;
-        text-align: center;
-        color: #CECECE;
-    }
-
-    #map {
-        width: 602px;
-        height: 540px;
-        left: 169px;
-        top: 194px;
-    }
-
-    .mapImg {
-        padding-left: 69px;
-    }
-
-    .mapText {
-        width: 165px;
-        height: 33px;
-        left: 388px;
-        top: 777px;
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 33px;
-        text-align: center;
-        color: #CECECE;
-    }
-
-    #email {
-        width: 512px;
-        height: 76px;
-        left: 857px;
-        top: 422px;
-        background: #FEFDFD;
-        border-radius: 25px;
-    }
-
-    #phone {
-        width: 512px;
-        height: 76px;
-        left: 856px;
-        top: 515px;
-        background: #FEFDFD;
-        border-radius: 25px;
-    }
-
-    #query {
-        width: 533px;
-        height: 150px;
-        left: 835px;
-        top: 608px;
-        background: #FEFDFD;
-        border-radius: 25px;
-    }
-
-    #submit {
-        width: 255px;
-        height: 72px;
-        left: 986px;
-        top: 806px;
-        background: #0034BB;
-        box-shadow: 0 0 20px 10px #031A53;
-        border-radius: 50px;
-        font-family: Lato;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 29px;
-        /* identical to box height */
-        color: #FFFFFF;
-    }
-
-    .contRight {
-        padding-left: 200px;
-    }
-
-    .mobileImage {
-        background-image: url("file:///C:/Users/abhi1/Desktop/chase-kinney-FMQBLyhD2HU-unsplash.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        position: relative;
-        /* filter: grayscale(100%); */
-    }
-
-    .mobileFlex {
-        display: flex;
-        flex: auto;
-    }
-
-    .mobPhone img {
-        position: absolute;
-        width: 351.1px;
-        height: 700px;
-        left: 1018px;
-        top: 129px;
-        border-radius: 50px;
-    }
-
-    .mobHeading {
-        position: absolute;
-        width: 533px;
-        height: 198px;
-        left: 187px;
-        top: 148px;
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 48px;
-        line-height: 66px;
-        text-align: center;
-        color: #CECECE;
-    }
-
-    .mobText {
-        padding-top: 69px;
-        position: absolute;
-        width: 274px;
-        height: 99px;
-        left: 324px;
-        top: 389px;
-        font-family: Stardos Stencil;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 33px;
-        text-align: center;
-        color: #868686;
-    }
-
-    .gImg {
-        position: absolute;
-        width: 100px;
-        height: 40px;
-        left: 139px;
-        top: 569px;
-    }
-
     .section-scroll-child {
         scroll-snap-align: start;
+    }
+
+    /* Services section */
+
+    #slide-left-button {
+        padding-right: 5rem;
+        cursor: pointer;
+        position: absolute;
+        top: 95rem;
+        left: 10vw;
+    }
+
+    #slide-right-button {
+        padding-left: 5rem;
+        cursor: pointer;
+        position: absolute;
+        top: 95rem;
+        left: 80vw;
+    }
+
+    #slide-left {
+        margin-right: -35rem;
+        position: absolute;
+        top: 75rem;
+        transition: margin-right 0.5s, z-index 0.5s, opacity 0.5s;
+    }
+
+    #slide-right {
+        margin-left: -35rem;
+        position: absolute;
+        top: 75rem;
+        transition: margin-left 0.5s, z-index 0.5s, opacity 0.5s;
+    }
+
+    #slide-center {
+        opacity: 100% !important;
+        z-index: 3;
+        position: absolute;
+        top: 75rem;
+        transition: z-index 0.5s, opacity 0.5s;
+    }
+
+    .slide-title {
+        font-size: 2.5rem;
+        font-family: 'Stardos Stencil';
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #CECECE;
+    }
+
+    .slide-description {
+        opacity: 100% !important;
+        font-size: 1.5rem;
+        width: 80%;
+        color: #868686;
+        font-family: 'Stardos Stencil';
+    }
+    
+    .slideshow-container {
+        display: flex;
+        padding-top: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 30%;
+        background-color: #05080E;
+        height: 70vh;
+        opacity: 30%;
+        border-radius: 15px;
+    }
+    .slide-image {
+        width: 30rem;
+        height: auto;
+        opacity: 30%;
+        margin: 3rem;
+        border-radius: 15px;
     }
 
 }

@@ -12,8 +12,8 @@
 <body>
     <div class="nav">
         <div class="nav-left hide-tab hide-mobile">
-            <a class="nav-item nav-is-active" href="#">Home</a>
-            <a class="nav-item" href="#">Services</a>
+            <a class="nav-item nav-is-active" href="#home">Home</a>
+            <a class="nav-item" href="#services">Services</a>
             <a class="nav-item" href="#">Gallery</a>
         </div>
         <div class="nav-brand-middle">
@@ -48,11 +48,11 @@
         </div>
     </div>
     <!-- LANDING PAGE -->
-    <div class="fullHeight landingimage section-scroll-child">
+    <div class="fullHeight landingimage section-scroll-child"  id="home">
         <div id="landingText">FITNESS.<br />DONE.<br />RIGHT.</div>
     </div>
     <!-- SERVICES PAGE -->
-    <div class="fullHeight section-scroll-child section">
+    <div class="fullHeight section-scroll-child section" id="services">
         <div class="section-heading">SERVICES</div>
         <div class="slideshow-container">
             <div id="slide-left-button" onclick="moveSlide('Left')"><img src="./static/images/BackArrow.svg" alt="Back Arrow Icon" height=42 width=42></div>
@@ -92,6 +92,7 @@
             </div>
             <div id="slide-right-button" onclick="moveSlide('Right')"><img src="./static/images/FrontArrow.svg" alt="Back Arrow Icon" height=42 width=42></div>
         </div>
+    </div>
 
         <!-- GALLERY PAGE -->
 
