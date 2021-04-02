@@ -121,6 +121,10 @@ body {
 
     /* Gallery */
 
+    #gallery-heading {
+        padding-top: 15rem;
+    }
+
     #gallery-left-button {
         cursor: pointer;
         position: absolute;
