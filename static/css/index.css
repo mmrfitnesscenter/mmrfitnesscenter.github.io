@@ -10,10 +10,6 @@ body {
 /* Mobile */
 @media only screen and (max-width: 767px) {
 
-    /* Contact */
-    #contact {
-        margin-top: 25rem;
-    }
     /* Mobile */
     #playstore-badge {
         height: 100px;
@@ -127,22 +123,22 @@ body {
     /* Gallery */
 
     #gallery {
-        margin-top: 25rem;
+        margin-top: 10rem;
     }
 
     #gallery-left-button {
         cursor: pointer;
         position: absolute;
-        top: 140rem;
-        left: 30vw;
+        top: 145rem;
+        left: 35vw;
         z-index: 2;
     }
 
     #gallery-right-button {
         cursor: pointer;
         position: absolute;
-        top: 140rem;
-        right: 30vw;
+        top: 145rem;
+        right: 35vw;
         z-index: 2;
     }
 
@@ -152,7 +148,7 @@ body {
         height: auto;
         width: auto;
         position: absolute;
-        top: 120rem;
+        top: 125rem;
         transition: left 0.5s, right 0.5s, opacity 0.5s;
     }
     #gallery-image-left-2 {
@@ -326,7 +322,7 @@ body {
     #slide-left-button {
         cursor: pointer;
         position: absolute;
-        top: 90rem;
+        top: 100rem;
         left: 35vw;
         z-index: 3;
     }
@@ -334,8 +330,8 @@ body {
     #slide-right-button {
         cursor: pointer;
         position: absolute;
-        top: 90rem;
-        left: 50vw;
+        top: 100rem;
+        right: 35vw;
     }
 
     #slide-left {
@@ -381,7 +377,7 @@ body {
     
     .slide {
         position: absolute;
-        top: 50rem;
+        top: 60rem;
         display: flex;
         flex-direction: column;
         align-items: center;
