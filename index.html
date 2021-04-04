@@ -49,7 +49,7 @@
     </div>
     <!-- LANDING PAGE -->
     <div class="full-height landingimage section-scroll-child" id="home">
-        <div id="landingText">FITNESS.<br />DONE.<br />RIGHT.</div>
+        <div id="landing-text">FITNESS.<br />DONE.<br />RIGHT.</div>
     </div>
     <!-- SERVICES PAGE -->
     <div class="full-height section-scroll-child section" id="services">
@@ -99,21 +99,29 @@
     <!-- GALLERY PAGE -->
     <div class="full-height section-scroll-child section" id="gallery">
         <div class="section-heading" id="gallery-heading">GALLERY</div>
-        <div class="slideshow-container">
+        <div class="gallery-container">
             <div id="gallery-left-button">
                 <img src="./static/images/BackArrow.svg" onclick="moveGallery('Left')" alt="Back Arrow Icon" height=42
                     width=42>
             </div>
 
-            <img class="gallery-image" id="gallery-image-left-2" src="./static/images/Gallery2.webp" alt="Bench press">
-            <img class="gallery-image" id="gallery-image-left-1" src="./static/images/Gallery3.webp" alt="Threadmill">
-            <img class="gallery-image" id="gallery-image-center" src="./static/images/Gallery7.webp"
-                alt="Overview image 1">
-            <img class="gallery-image" id="gallery-image-right-1" src="./static/images/Gallery1.webp" alt="Lat machine">
-            <img class="gallery-image" id="gallery-image-right-2" src="./static/images/Gallery5.webp"
-                alt="Bench press 2">
-            <!-- <img class="gallery-image" id="gallery-image-center" src="./static/images/Gallery4.webp" alt="Leg press machine"> -->
-            <!-- <img class="gallery-image" id="gallery-image-right-2" src="./static/images/Gallery6.webp" alt="Calf raises"> -->
+            <div class="gallery-div">
+                <div class="gallery-banner">
+                    <img class="gallery-main-image hide" src="./static/images/Gallery2.webp" alt="Bench press">
+                    <img class="gallery-main-image hide" src="./static/images/Gallery3.webp" alt="Threadmill">
+                    <img class="gallery-main-image" src="./static/images/Gallery7.webp" alt="Overview image 1">
+                    <img class="gallery-main-image hide" src="./static/images/Gallery1.webp" alt="Lat machine">
+                    <img class="gallery-main-image hide" src="./static/images/Gallery5.webp" alt="Bench press 2">
+                </div>
+    
+                <div class="select-image">
+                    <img class="gallery-image" onclick="galleryImageClick(1)" src="./static/images/Gallery2.webp" alt="Bench press">
+                    <img class="gallery-image" onclick="galleryImageClick(2)" src="./static/images/Gallery3.webp" alt="Threadmill">
+                    <img class="gallery-image image-selected" onclick="galleryImageClick(3)" src="./static/images/Gallery7.webp" alt="Overview image 1">
+                    <img class="gallery-image" onclick="galleryImageClick(4)" src="./static/images/Gallery1.webp" alt="Lat machine">
+                    <img class="gallery-image" onclick="galleryImageClick(5)" src="./static/images/Gallery5.webp" alt="Bench press 2">
+                </div>
+            </div>
 
             <div id="gallery-right-button">
                 <img src="./static/images/FrontArrow.svg" onclick="moveGallery('Right')" alt="Front Arrow Icon"
@@ -129,7 +137,7 @@
         <div class="contact-section">
             <div class="map-section">
                 <div class="map-image">
-                    <iframe id="map-embed" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15544.572584741447!2d80.190342!3d13.090113!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42d3e58d33f8cd7a!2sMMR%20fitness%20centre!5e0!3m2!1sen!2sin!4v1617392421456!5m2!1sen!2sin" style="border:0;" allowfullscreen="yes" loading="lazy"></iframe>
+                    <iframe id="map-embed" title="MMR Fitness Center location" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15544.572584741447!2d80.190342!3d13.090113!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42d3e58d33f8cd7a!2sMMR%20fitness%20centre!5e0!3m2!1sen!2sin!4v1617392421456!5m2!1sen!2sin" style="border:0;" allowfullscreen="yes" loading="lazy"></iframe>
                 </div>
     
                 <div class="map-details">
@@ -167,7 +175,7 @@
                     <div class="mobile-heading">MMR FITNESS CENTER<br />MOBILE<br />APPLICATION</div>
                     <div class="mobile-text">Your fitness companion, now on your palm.<br />Anywhere.</div>
                     <div>
-                        <img id="playstore-badge" src="./static/images/GooglePlayBadge.png">
+                        <img id="playstore-badge" src="./static/images/GooglePlayBadge.png" alt="Playstore badge">
                     </div>
                 </div>
                 <div>
